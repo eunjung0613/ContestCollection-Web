@@ -3,9 +3,11 @@ import { Theme } from "@emotion/react";
 const theme: Theme = {
   color: {
     yellow: "#f7d794",
-    grey: "#f2f2f2",
+    darkYellow: "#f2b600",
+    grey: "#F6F6F6",
+    lightGrey: "#eaecef",
     white: "#FFFFFF",
-    black: "#000000",
+    black: "#172b4d",
   },
   fontWeight: {
     light: 300,
