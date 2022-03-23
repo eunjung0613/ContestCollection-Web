@@ -6,7 +6,9 @@ function Router() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/list" element={<List />} />
+      <Route path="/list/it" element={<List />} />
+      <Route path="/list/media" element={<List />} />
+      <Route path="/list/sw" element={<List />} />
     </Routes>
   );
 }
