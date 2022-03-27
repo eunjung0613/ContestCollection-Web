@@ -2,12 +2,15 @@
 
 import { css, Theme } from "@emotion/react";
 import Nav from "components/Nav";
+import MainCard from "components/MainCard/mainintro";
 
 function Main() {
   return (
     <>
       <Nav />
-      <main css={Wrapper}>Main page</main>;
+      <main css={Wrapper}>
+        <MainCard />
+      </main>;
     </>
   );
 }
