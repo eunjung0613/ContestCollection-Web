@@ -22,6 +22,7 @@ const globalStyle = css`
     height: 100vh;
     overflow-x: hidden;
     box-sizing: border-box;
+    world-break:keep-all;
   }
 
   button,
