@@ -1,31 +1,31 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import serviceImg from "assets/images/test.png";
 import { Link } from "react-router-dom";
 
 interface Props {
-  title: string;
-  exhibit: string | undefined;
+  name: string;
+  award: string;
   summary: string;
+  img: string;
 }
 
-function ListCard({ title, exhibit, summary }: Props) {
+function ListCard({ name, award, summary, img }: Props) {
   return (
-    <Link to="/detail">
+    <Link to={`/detail/${name}`}>
       <div css={Wrapper}>
         <div css={titleWrapper}>
-          <span css={Title}>{title}</span>
-          <span css={Exhibit}>{exhibit}</span>
+          <span css={Title}>{name}</span>
+          <span css={Exhibit}>{award}</span>
         </div>
         <div css={bottomWrapper}>
           <div css={imgWrapper}>
-            <img src={serviceImg} alt="img" css={img} />
+            <img src={img} alt="img" css={imgStyle} />
           </div>
           <div css={summaryWrapper}>
             <span css={Summary}>{summary}</span>
           </div>
-        </div>{" "}
+        </div>
         <div css={buttonWrapper}>
           <button css={Button}>Go service</button>
         </div>
@@ -37,7 +37,7 @@ function ListCard({ title, exhibit, summary }: Props) {
 export default ListCard;
 
 const Wrapper = (theme: Theme) => css`
-  width: 17.5rem;
+  width: 17rem;
   height: 20rem;
   padding: 0.75rem;
   border-radius: 0.438rem;
@@ -80,7 +80,7 @@ const imgWrapper = css`
   width: 100%;
 `;
 
-const img = css`
+const imgStyle = css`
   position: absolute;
   width: 100%;
   height: 100%;
@@ -112,7 +112,7 @@ const buttonWrapper = css`
 const Button = (theme: Theme) => css`
   position: absolute;
   right: 0;
-  font-size: 1rem;
+  font-size: 0.93rem;
   font-weight: ${theme.fontWeight.normal};
   :hover {
     color: ${theme.color.darkYellow};

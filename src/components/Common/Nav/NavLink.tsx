@@ -4,11 +4,11 @@ import { css } from "@emotion/react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 interface Props {
-  name: string;
+  category: string;
   path: string;
 }
 
-function NavLink({ name, path }: Props) {
+function NavLink({ category, path }: Props) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   return (
@@ -22,7 +22,7 @@ function NavLink({ name, path }: Props) {
         padding: 3px 10px;
       `}
     >
-      {name}
+      {category}
     </button>
   );
 }

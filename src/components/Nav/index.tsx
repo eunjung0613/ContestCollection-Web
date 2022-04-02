@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import logo from "assets/images/logo.png";
 import NavLink from "components/Common/Nav/NavLink";
 
+
 function Nav() {
   return (
     <section css={section}>
@@ -19,11 +20,11 @@ function Nav() {
       <nav css={nav}>
         <div css={buttonWrapper}>
           <span css={title}>introduction</span>
-          <NavLink name="Home" path="/" />
+          <NavLink category="Home" path="/" />
           <span css={title}>Collection</span>
-          <NavLink name="IT" path="/list/it" />
-          <NavLink name="미디어컨텐츠" path="/list/media" />
-          <NavLink name="S/W 경진대회" path="/list/sw" />
+          <NavLink category="IT" path="/all/It" />
+          <NavLink category="미디어컨텐츠" path="/all/Media" />
+          <NavLink category="SW" path="/all/Sw" />
         </div>
       </nav>
     </section>
