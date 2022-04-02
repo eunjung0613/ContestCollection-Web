@@ -1,17 +1,23 @@
 import { Routes, Route } from "react-router-dom";
-import List from "pages/List";
 import Main from "pages/Main";
 import Detail from "pages/Detail";
 import NotFound from "pages/NotFound";
+import It from "pages/List/It";
+import Media from "pages/List/Media";
+import Sw from "pages/List/Sw";
 
 function Router() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/list/it" element={<List />} />
-      <Route path="/list/media" element={<List />} />
-      <Route path="/list/sw" element={<List />} />
-      <Route path="/detail" element={<Detail />} />
+      <Route path="/all/It" element={<It />} />
+      <Route path="/all/Media" element={<Media />} />
+      <Route path="/all/Sw" element={<Sw />} />
+
+      {/* <Route path="/award/:category" element={<Award />} />
+      <Route path="/exhibit/:category" element={<Exhibit />} /> */}
+
+      <Route path="/detail/:name" element={<Detail />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
