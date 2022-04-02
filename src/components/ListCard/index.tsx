@@ -43,6 +43,7 @@ const Wrapper = (theme: Theme) => css`
   border-radius: 0.438rem;
   box-shadow: 0.1em 0.1em 0.1em 0.1em ${theme.color.lightGrey};
   cursor: pointer;
+  border-style: dottied;
 `;
 
 const titleWrapper = (theme: Theme) => css`
