@@ -66,6 +66,6 @@ const data = (theme: Theme) => css`
 `;
 
 const title = (theme: Theme) => css`
-  font-size: 1.28rem;
+  font-size: 1.2rem;
   font-weight: ${theme.fontWeight.bold};
 `;
