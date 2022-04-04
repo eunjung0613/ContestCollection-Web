@@ -20,7 +20,7 @@ function Media() {
               key={service.name}
               name={service.name}
               award={service.award}
-              summary={service.summary}
+              subTitle={service.subTitle}
               img={service.img}
             />
           ))}
