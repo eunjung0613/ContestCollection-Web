@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from "@emotion/react";
-import { useLocation, useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 interface Props {
   name: string;
@@ -10,7 +10,6 @@ interface Props {
 }
 
 function ServeNav({ name, category, path }: Props) {
-  const { pathname } = useLocation();
   const navigate = useNavigate();
   return (
     <Link to={`${path}/${category}`}>

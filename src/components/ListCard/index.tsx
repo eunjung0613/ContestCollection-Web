@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 interface Props {
   name: string;
   award: string;
-  summary: string;
+  subTitle: string;
   img: string;
 }
 
-function ListCard({ name, award, summary, img }: Props) {
+function ListCard({ name, award, subTitle, img }: Props) {
   return (
     <Link to={`/detail/${name}`}>
       <div css={Wrapper}>
@@ -23,7 +23,7 @@ function ListCard({ name, award, summary, img }: Props) {
             <img src={img} alt="img" css={imgStyle} />
           </div>
           <div css={summaryWrapper}>
-            <span css={Summary}>{summary}</span>
+            <span css={Summary}>{subTitle}</span>
           </div>
         </div>
         <div css={buttonWrapper}>
@@ -43,7 +43,6 @@ const Wrapper = (theme: Theme) => css`
   border-radius: 0.438rem;
   box-shadow: 0.1em 0.1em 0.1em 0.1em ${theme.color.lightGrey};
   cursor: pointer;
-  border-style: dottied;
 `;
 
 const titleWrapper = (theme: Theme) => css`
