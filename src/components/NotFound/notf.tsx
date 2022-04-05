@@ -33,8 +33,8 @@ const Allwrap = css`
   flex-direction: column;
   align-items: center;
   margin-top: 15%;
-  flex-wrap: wrap;
 `;
+
 const lottiecontent = css`
   width: 30rem;
 `;
