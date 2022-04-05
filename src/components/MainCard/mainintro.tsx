@@ -19,15 +19,16 @@ function MainCard() {
 
     return (
         <div>
-            <div css = {wrap1}>
-                <Link to ='/list/it'>
+            <div css = {mainwrap}>
+                <Link to ='/all/it'>
                 <div css = {wrap2} ref = {container}></div>
                 </Link>
                 <br/>
                 <div css= {maintext}> 
-                <h4 css = {mainh}><span css = {mainh2}>S-CON이란?</span></h4>
+                <div>
+                <h4 css = {mainh}><span css = {mainh2}>S-CON이란?</span></h4></div>
                 <div css = {mainp}><span css = {mainh3}><span css = {text}>S-CON은</span> 성공회대학교 IT 경진대회 및 소프트웨어 경진대회와 미디어컨텐츠 경진대회등 이공계열 학생들이 참여하는 교내 대회 작품을 조금 더 쉽게 확인할 수 있도록 만들어진 <span css = {text}>경진대회 모음집</span>이라고 할 수 있습니다.</span></div>
-                <h4  css = {mainh}><span css = {mainh4}>S-CON 사용법</span></h4>
+                <div><h4  css = {mainh}><span css = {mainh4}>S-CON 사용법</span></h4></div>
                 <p css = {mainp} ><span css = {mainh5}>현재 페이지에서 <span css = {text}>좌측</span>을 확인시 각 <span css = {text}>[IT] [미디어켄턴츠] [S/W 경진대회] 의 탭</span>이 있는 것을 확인할 수 있습니다. 각 탭을 클릭 시 해당 경진대회에 수상한 작품의 이름과 팀명을 확인할 수 있으며, 추가적으로 마음에 드는 작품을 클릭하면 해당 작품에 대한 영상과 작품 내용을 확인할 수 있습니다.</span>
                 </p>
                 </div>
@@ -45,9 +46,9 @@ function MainCard() {
 
 export default MainCard;
 
-const wrap1 = (theme:Theme)=> css`
+const mainwrap = (theme:Theme)=> css`
+    min-width: 40rem;
     position: relative;
-    flex-direction: column;
     margin-top : 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
@@ -68,12 +69,14 @@ const introduce = (theme:Theme)=> css`
 `
 
 const maintext= (theme:Theme)=>css`
-    margin-left : 30rem;
-    margin-right: 30rem;
+    width : 100%;
     padding: 3rem;
+    text-align:center;
 `
 
 const mainh= (theme:Theme)=>css`
+    max-width: 50%;
+    display: inline-block;
     fot-size:3em;
     line-height: 1;
     font-weigjt: ${theme.fontWeight.bold};
@@ -84,13 +87,13 @@ const mainh= (theme:Theme)=>css`
     border-radius: 0.7rem;
     :after{
         content:""; 
-        position: absolute;
-        left: 33rem;
+        position: relative;
         border-right: 1.5rem solid #f2b600; 
         border-top: 1.2rem solid transparent; 
         border-bottom: 0.5rem solid transparent;
         z-index: -1;
     }
+    position : relative;
 `
 const frameup = keyframes`
     0% {
@@ -117,22 +120,16 @@ const mainh5 = (theme:Theme) => css`
 `
 
 const mainp= (theme:Theme)=>css`
+    text-align: justify;
+    max-width: 45%;
+    display: inline-block;
     font-weight:${theme.fontWeight.light};
     padding: 1rem;
     color: #ffffff;
     margin: 2rem;
     background-color: #f7d794;
     border-radius: 0.7rem;
-    :after{
-        content:""; 
-        position: absolute;
-        right : 33.5rem;
-        border-left: 30px solid #f7d794; 
-        border-top: 20px solid transparent; 
-        border-bottom: 10px solid transparent;
-    }
-    overflow: hidden;
-    animation: fadein 7s ease-in-out;
+    position : relative;
 `
 
 const btnwrap = (theme:Theme)=>css`
