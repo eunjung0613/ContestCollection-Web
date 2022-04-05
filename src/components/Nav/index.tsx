@@ -38,9 +38,9 @@ const section = (theme: Theme) => css`
   top: 0;
   left: 0;
 
-  width: 11.5rem;
+  width: 13.4rem;
   height: 100%;
-  padding: 0px 30px;
+  padding: 0px 40px;
   background-color: ${theme.color.grey};
 `;
 
@@ -54,7 +54,7 @@ const header = (theme: Theme) => css`
   flex-direction: row;
   align-items: center;
 
-  font-size: 1.23em;
+  font-size: 1.24em;
   font-weight: ${theme.fontWeight.bold};
 `;
 
@@ -73,7 +73,7 @@ const nav = (theme: Theme) => css`
   display: flex;
   flex-direction: row;
 
-  font-size: 0.86rem;
+  font-size: 0.95rem;
   font-weight: ${theme.fontWeight.normal};
 `;
 
@@ -82,14 +82,14 @@ const buttonWrapper = css`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 1.3rem;
+  gap: 1.6rem;
 `;
 
 const title = (theme: Theme) => css`
-  margin-top: 1.6rem;
+  margin-top: 1.8rem;
   width: 100%;
   color: ${theme.color.darkYellow};
   font-weight: ${theme.fontWeight.bold};
-  font-size: 0.75rem;
+  font-size: 0.87rem;
   line-height: 1.7rem;
 `;
