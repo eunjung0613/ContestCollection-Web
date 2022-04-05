@@ -10,7 +10,7 @@ function NotFound() {
       <Nav />
       <div css={Wrapper}>
         <NF />
-      </div>;
+      </div>
     </div>
   );
 }
