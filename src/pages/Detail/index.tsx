@@ -67,8 +67,8 @@ export default Detail;
 const totalWrapper = css`
   position: relative;
   min-height: 100vh;
-  padding: 1.875rem 2.625rem;
-  margin-left: 15rem;
+  padding: 1.875rem 2.8rem;
+  margin-left: 17rem;
 `;
 
 const titleWrapper = css`
