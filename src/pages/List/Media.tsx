@@ -36,7 +36,7 @@ export default Media;
 const Wrapper = css`
   position: relative;
   min-height: 100vh;
-  margin-left: 15rem;
+  margin-left: 17rem;
 `;
 
 const navWrapper = css`
