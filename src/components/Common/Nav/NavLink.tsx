@@ -19,7 +19,7 @@ function NavLink({ category, path }: Props) {
         font-weight: ${pathname === path ? "700" : ""};
         line-height: 1.7rem;
         width: 100%;
-        padding: 3px 10px;
+        padding: 5px 11px;
       `}
     >
       {category}
