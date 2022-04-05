@@ -91,7 +91,7 @@ const videoWrapper = css`
   position: relative;
   margin: 1.8rem 0;
   width: 100%;
-  aspect-ratio: 16 / 7;
+  aspect-ratio: 13 / 6;
 `;
 
 const summaryWrapper = css`
@@ -122,7 +122,7 @@ const skil = (theme: Theme) => css`
   white-space: nowrap;
 
   color: ${theme.color.darkYellow};
-  background-color: ${theme.color.grey};
+  background-color: #fcf7e8;
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
