@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import logo from "assets/images/logo.png";
 import NavLink from "components/Common/Nav/NavLink";
 
-
 function Nav() {
   return (
     <section css={section}>

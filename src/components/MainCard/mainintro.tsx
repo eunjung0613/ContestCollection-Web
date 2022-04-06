@@ -13,7 +13,7 @@ function MainCard() {
             renderer:'svg',
             loop: true,
             autoplay: true,
-            animationData:require('assets/images/main_intro.json')
+            animationData:require('assets/lottieJSON/main_intro.json')
         })
     },[])
 

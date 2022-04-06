@@ -10,7 +10,8 @@ function Main() {
       <Nav />
       <main css={Wrapper}>
         <MainCard />
-      </main>;
+      </main>
+      ;
     </>
   );
 }
