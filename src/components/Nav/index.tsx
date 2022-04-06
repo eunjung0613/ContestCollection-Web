@@ -24,6 +24,8 @@ function Nav() {
           <NavLink category="IT" path="/all/It" />
           <NavLink category="미디어컨텐츠" path="/all/Media" />
           <NavLink category="SW" path="/all/Sw" />
+          <span css={title}>Join us</span>
+          <NavLink category="Signin" path="/signin" />
         </div>
       </nav>
     </section>

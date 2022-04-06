@@ -5,6 +5,7 @@ import NotFound from "pages/NotFound";
 import It from "pages/List/It";
 import Media from "pages/List/Media";
 import Sw from "pages/List/Sw";
+import Signin from "pages/Signin";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
 
       <Route path="/detail/:name" element={<Detail />} />
       <Route path="*" element={<NotFound />} />
+      <Route path="/signin" element={<Signin />} />
     </Routes>
   );
 }
