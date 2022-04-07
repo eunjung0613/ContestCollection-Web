@@ -56,7 +56,7 @@ const leftWrapper = (theme: Theme) => css`
   top: 0;
   left: 0;
   width: 15rem;
-  height: 100vh;
+  height: 130vh;
   padding: 0px 40px;
   background-color: ${theme.color.grey};
 `;
