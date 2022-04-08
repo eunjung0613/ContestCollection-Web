@@ -37,7 +37,7 @@ const ButtonElement = styled.button<IButtonProps>`
       height: 25px;
       padding: 0 12px;
       font-size: 1rem;
-      border-radius: 6px;
+      border-radius: 8px;
     `};
 
   ${(props) =>
