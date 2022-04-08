@@ -17,6 +17,7 @@ const meetwrap = (theme: Theme) => css`
   display: flex;
   margin: auto auto;
   background-color: ${theme.color.white};
+  border-radius: 3rem;
 `;
 
 const imgwrapMain = css`
