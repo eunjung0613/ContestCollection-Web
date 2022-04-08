@@ -2,19 +2,18 @@
 
 import { css, Theme } from "@emotion/react";
 import { AiFillGithub, AiFillMail } from "react-icons/ai";
+
 function Footer() {
   return (
     <footer css={wrapper}>
       <div css={infromWrapper}>
         <a href="https://github.com/S-CON-SKHU">
           <h2 css={link}>
-            {" "}
-            <AiFillGithub size="24" css={icon}/> Github
+            <AiFillGithub size="24" css={icon} /> Github
           </h2>
         </a>
         <a href="mailto: 3021062@gmail.com">
           <h2 css={link}>
-            {" "}
             <AiFillMail size="27" css={icon} /> Mail
           </h2>
         </a>
@@ -81,5 +80,4 @@ const copyright = css`
 
 const icon = css`
   margin-right: 5px;
-
-`
+`;

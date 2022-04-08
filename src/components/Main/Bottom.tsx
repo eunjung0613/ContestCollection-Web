@@ -6,6 +6,7 @@ import {
   defaultFadeInUpVariants,
   defaultFadeInScaleVariants,
 } from "constants/motion";
+
 function Bottom() {
   return (
     <div css={wrapper}>
