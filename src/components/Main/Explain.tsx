@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
+import { motion } from "framer-motion";
+import { defaultFadeInUpVariants } from "constants/motion";
 
 interface Props {
   smallTitle: string;
@@ -10,11 +12,18 @@ interface Props {
 
 function Explain({ smallTitle, title, summary }: Props) {
   return (
-    <div css={wrapper}>
-      <p css={subTitle}>{smallTitle}</p>
-      <p css={pointTitle}>{title}</p>
-      <p css={content}>{summary}</p>
-    </div>
+    <motion.div
+      initial="initial"
+      whileInView="animate"
+      variants={defaultFadeInUpVariants}
+      viewport={{ once: false }}
+    >
+      <div css={wrapper}>
+        <p css={subTitle}>{smallTitle}</p>
+        <p css={pointTitle}>{title}</p>
+        <p css={content}>{summary}</p>
+      </div>
+    </motion.div>
   );
 }
 
