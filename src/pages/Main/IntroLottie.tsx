@@ -18,6 +18,7 @@ export default IntroLottie;
 const wrapper = css`
   position: relative;
   width: 100%;
-  height: 140vh;
+  height: 100%;
+  padding-bottom: 55px;
   z-index: -1;
 `;
