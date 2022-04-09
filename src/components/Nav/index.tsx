@@ -12,7 +12,7 @@ function Nav() {
         <Link to="/">
           <div css={logoWrapper}>
             <img src={logo} alt="logo" css={logoImage} />
-            S-CON
+            S_CON
           </div>
         </Link>
       </header>
