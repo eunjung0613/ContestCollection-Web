@@ -7,6 +7,7 @@ import Media from "pages/List/Media";
 import Sw from "pages/List/Sw";
 import Signin from "pages/Signin";
 import Write from "pages/Write";
+import Meet from "pages/Meet";
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function Router() {
       <Route path="*" element={<NotFound />} />
       <Route path="/signin" element={<Signin />} />
       <Route path="/write" element={<Write />} />
+      <Route path="/meet" element={<Meet />} />
     </Routes>
   );
 }
