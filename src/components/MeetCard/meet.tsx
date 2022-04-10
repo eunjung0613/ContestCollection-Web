@@ -6,7 +6,7 @@ function meet() {
   // 화상 화면을 구상합니다.
   return (
     <div css={meetwrap}>
-      <img src={IMG} css={imgwrapMain} />
+      <img src={IMG} css={imgwrapMain} alt="Img"/>
     </div>
   );
 }

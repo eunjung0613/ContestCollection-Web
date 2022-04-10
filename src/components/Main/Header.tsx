@@ -21,6 +21,7 @@ function Header() {
             variants={defaultFadeInScaleVariants}
             viewport={{ once: false }}
             css={logoMotion}
+            exit="exit"
           >
             S_CON
           </motion.div>
