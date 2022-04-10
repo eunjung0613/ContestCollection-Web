@@ -55,6 +55,12 @@ const leftWrapper = (theme: Theme) => css`
   height: 100vh;
   padding: 0px 40px;
   background-color: ${theme.color.grey};
+  ${theme.mediaQuery.tablet} {
+    width: 25rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    width: 16rem;
+  }
 `;
 
 const logoWrapper = (theme: Theme) => css`
@@ -77,6 +83,10 @@ const header = (theme: Theme) => css`
   width: 100%;
   height: 6rem;
   font-weight: ${theme.fontWeight.bold};
+
+  ${theme.mediaQuery.mobile} {
+    height: 8rem;
+  }
 `;
 
 const lottieWrapper = css`
@@ -87,7 +97,7 @@ const lottieWrapper = css`
   align-items: center;
 `;
 
-const rightWrapper = css`
+const rightWrapper = (theme: Theme) => css`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -96,6 +106,13 @@ const rightWrapper = css`
   min-height: 100vh;
   width: fit-content;
   margin-left: 20rem;
+
+  ${theme.mediaQuery.tablet} {
+    margin-left: 5rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    margin-left: 0.5rem;
+  }
 `;
 
 const title = (theme: Theme) => css`
@@ -104,6 +121,9 @@ const title = (theme: Theme) => css`
   font-size: 1.8rem;
   line-height: 1.3;
   text-align: center;
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.6rem;
+  }
 `;
 
 const subtitle = (theme: Theme) => css`
@@ -130,14 +150,27 @@ const button = (theme: Theme) => css`
   font-size: 1.33rem;
   line-height: 1.3;
 
-  :hover{
+  :hover {
     color: ${theme.color.white};
     background-color: #ffcf3d;
     transition: all 0.33s;
+  }
+
+  ${theme.mediaQuery.tablet} {
+    width: 270px;
+    font-size: 1.25rem;
+  }
+
+  ${theme.mediaQuery.mobile} {
+    width: 190px;
+    font-size: 1rem;
   }
 `;
 
 const buttonSummary = (theme: Theme) => css`
   margin-left: 1.7rem;
   font-weight: ${theme.fontWeight.bold};
+  ${theme.mediaQuery.mobile} {
+    margin-left: 1rem;
+  }
 `;
