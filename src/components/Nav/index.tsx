@@ -24,6 +24,8 @@ function Nav() {
           <NavLink category="IT" path="/all/It" />
           <NavLink category="미디어컨텐츠" path="/all/Media" />
           <NavLink category="SW" path="/all/Sw" />
+          <span css={title}>Meet</span>
+          <NavLink category="Meet" path="/meet" />
           <span css={title}>Join us</span>
           <NavLink category="Signin" path="/signin" />
         </div>
@@ -43,13 +45,18 @@ const section = (theme: Theme) => css`
   height: 100%;
   padding: 0px 40px;
   background-color: ${theme.color.grey};
+
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
 `;
 
 const header = (theme: Theme) => css`
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 5.5rem;
+  height: 5.7rem;
 
   display: flex;
   flex-direction: row;
@@ -73,6 +80,8 @@ const logoImage = css`
 const nav = (theme: Theme) => css`
   display: flex;
   flex-direction: row;
+
+  height: 100%;
 
   font-size: 0.95rem;
   font-weight: ${theme.fontWeight.normal};

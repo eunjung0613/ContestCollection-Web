@@ -15,6 +15,8 @@ import {
   defaultFadeInLeftVariants,
 } from "constants/motion";
 import Bottom from "components/Main/Bottom";
+import Chapter from "components/Main/Chapter";
+import IosPart from "components/Main/IosPart";
 
 function Main() {
   return (
@@ -24,15 +26,17 @@ function Main() {
         <Header />
         <section css={methodWrapper}>
           <div css={methodInner}>
-            <h1 css={chapter}>How to use</h1>
-            <h2 css={subTitle}>회대 경진대회를 한 곳에서, S_CON</h2>
-
+            <Chapter
+              title="How to use"
+              summary="회대 경진대회를 한 곳에서, S_CON"
+            />
             <div css={methodSummary}>
               <Explain
                 smallTitle="간단하고 편리하게"
                 title="간단하고 편리하게 모두의 서비스를"
                 summary="연도별 수상작들을 S_CON에서 한눈에 확인하세요."
               />
+
               <img src={computer} alt="img" css={img} />
             </div>
             <div css={methodSummary}>
@@ -56,12 +60,19 @@ function Main() {
                 <StudentLottie />
               </div>
             </div>
+
+
+
+<IosPart />
+
+
             <div css={useWrapper}>
               <motion.div
                 initial="initial"
                 whileInView="animate"
                 variants={defaultFadeInLeftVariants}
                 viewport={{ once: false }}
+                exit="exit"
               >
                 <h1 css={subTitle}>S_CON, 너도 할 수 있어</h1>
               </motion.div>
@@ -75,6 +86,7 @@ function Main() {
                   whileInView="animate"
                   variants={defaultFadeInUpVariants}
                   viewport={{ once: false }}
+                  exit="exit"
                 >
                   <p css={useSummary}>
                     출품작, 수상작 상관없이 등록할 수 있어요.
@@ -90,19 +102,44 @@ function Main() {
               </div>
 
               <div css={endWrapper}>
-                <motion.div
-                  initial="initial"
-                  whileInView="animate"
-                  variants={defaultFadeInUpVariants}
-                  viewport={{ once: false }}
-                >
-                  <div css={methodLeft}>
+                <div css={methodLeft}>
+                  <motion.div
+                    initial="initial"
+                    whileInView="animate"
+                    variants={defaultFadeInUpVariants}
+                    viewport={{ once: false }}
+                    exit="exit"
+                  >
                     <h2 css={useTextTitle}>문의사항은 언제나</h2>
-                    <p css={useTextSubtitle}>회대생들의</p>
+                  </motion.div>
+                  <motion.div
+                    initial="initial"
+                    whileInView="animate"
+                    variants={defaultFadeInUpVariants}
+                    viewport={{ once: false }}
+                    exit="exit"
+                  >
+                    <p css={useTextSubtitle}>회대생들의</p>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial="initial"
+                    whileInView="animate"
+                    variants={defaultFadeInUpVariants}
+                    viewport={{ once: false }}
+                    exit="exit"
+                  >
                     <p css={useTextSubtitle}>관심이</p>
-                    <p css={useTextSubtitle}>S_CON을 만들어갑니다.</p>
-                  </div>
-                </motion.div>
+                  </motion.div>
+                  <motion.div
+                    initial="initial"
+                    whileInView="animate"
+                    variants={defaultFadeInUpVariants}
+                    viewport={{ once: false }}
+                    exit="exit"
+                  >
+                    <p css={useTextSubtitle}>S_CON을 만들어갑니다.</p>{" "}
+                  </motion.div>
+                </div>
 
                 <div css={inquiryWrapper}>
                   <p css={useSummary}>
@@ -156,13 +193,6 @@ const methodInner = css`
   width: 92%;
   height: 100%;
   margin: 0 auto;
-`;
-
-const chapter = (theme: Theme) => css`
-  font-size: 1.25rem;
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.color.darkYellow};
-  margin-bottom: 30px;
 `;
 
 const subTitle = (theme: Theme) => css`
