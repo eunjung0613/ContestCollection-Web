@@ -68,7 +68,7 @@ const meetwrap = (theme: Theme) => css`
   gap: 30px 40px;
   width: 100%;
   padding: 3rem;
-  height: auto;
+  min-height: 80vh;
 `;
 
 const link = (theme: Theme) => css`
@@ -92,12 +92,12 @@ const texta = css`
 
 const main = (theme: Theme) => css`
   background-color: ${theme.color.black};
+  height: auto;
 `;
 
 const linkwrap = css`
   width: 100%;
   padding: 3%;
-  margin: auto auto;
 `;
 
 const buttonwrap = (theme: Theme) => css`
@@ -111,19 +111,17 @@ const buttonwrap = (theme: Theme) => css`
   justify-content: space-between;
   text-align: center;
   background-color: ${theme.color.white};
-  width: 100%;
 `;
 
-const btn1 = (theme: Theme) => css`
-  width: 15%;
-  height: auto;
+const btn1 = css`
+  width: 2rem;
 `;
-const btn2 = (theme: Theme) => css`
-  width: 15%;
+const btn2 = css`
+  width: 2rem;
 `;
-const btn3 = (theme: Theme) => css`
-  width: 15%;
+const btn3 = css`
+  width: 2rem;
 `;
-const btn4 = (theme: Theme) => css`
-  width: 15%;
+const btn4 = css`
+  width: 2rem;
 `;
