@@ -14,20 +14,20 @@ function Signin() {
           <Link to="/">
             <div css={logoWrapper}>
               <img src={logo} alt="logo" css={logoImage} />
-              S-CON
+              S_CON
             </div>
           </Link>
         </header>
         <article css={lottieWrapper}>
           <h1 css={title}>Skhu Contest</h1>
-          <p css={subtitle}>교내 경진대회를 위한 올인원 서비스 S-CON </p>
+          <p css={subtitle}>교내 경진대회를 위한 올인원 서비스 S_CON </p>
           <HelloLottie />
         </article>
       </div>
 
       <div css={rightWrapper}>
         <h1 css={title}>로그인</h1>
-        <p css={subtitle}>S-CON에 로그인하고 더 많은 서비스를 이용하세요.</p>
+        <p css={subtitle}>S_CON에 로그인하고 더 많은 서비스를 이용하세요.</p>
 
         <button css={button}>
           <FcGoogle size="45" /> <span css={buttonSummary}>Google Login</span>
