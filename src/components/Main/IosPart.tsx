@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { defaultFadeInUpVariants } from "constants/motion";
 import Chapter from "components/Main/Chapter";
@@ -47,7 +48,9 @@ function IosPart() {
       <div>
         <h3 css={summary}>
           지금
-          <span css={linkTo}>여기서</span>
+          <span css={linkTo}>
+            <Link to="*">여기서</Link>
+          </span>
           앱에서 S_CON을 이용해보세요.
         </h3>
       </div>
@@ -57,7 +60,7 @@ function IosPart() {
 
 export default IosPart;
 
-const wrapper = css`
+const wrapper = (theme: Theme) => css`
   position: relative;
   width: 100%;
   margin: 170px 0 200px 0;
