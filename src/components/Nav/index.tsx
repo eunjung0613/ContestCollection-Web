@@ -50,6 +50,10 @@ const section = (theme: Theme) => css`
   ::-webkit-scrollbar {
     width: 1px;
   }
+  ${theme.mediaQuery.mobile} {
+    width: 9.3rem;
+    padding: 0px 23px;
+  }
 `;
 
 const header = (theme: Theme) => css`
@@ -63,6 +67,7 @@ const header = (theme: Theme) => css`
   align-items: center;
 
   font-size: 1.24em;
+
   font-weight: ${theme.fontWeight.bold};
 `;
 
@@ -71,10 +76,15 @@ const logoWrapper = css`
   flex-direction: row;
 `;
 
-const logoImage = css`
+const logoImage = (theme: Theme) => css`
   width: 2rem;
   height: 2rem;
   margin-right: 0.7rem;
+  ${theme.mediaQuery.mobile} {
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 0.5rem;
+  }
 `;
 
 const nav = (theme: Theme) => css`
