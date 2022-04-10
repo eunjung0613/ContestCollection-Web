@@ -61,10 +61,7 @@ function Main() {
               </div>
             </div>
 
-
-
-<IosPart />
-
+            <IosPart />
 
             <div css={useWrapper}>
               <motion.div
@@ -167,13 +164,22 @@ function Main() {
 
 export default Main;
 
-const img = css`
+const img = (theme: Theme) => css`
   max-width: calc(50% - 30px);
+
+  ${theme.mediaQuery.tablet} {
+    margin-left: 3.125rem;
+  }
 `;
 
-const phoneImg = css`
+const phoneImg = (theme: Theme) => css`
   max-width: calc(30% - 30px);
   margin-left: 5rem;
+
+  ${theme.mediaQuery.tablet} {
+    margin-left: 0rem;
+    margin-right: 3.125rem;
+  }
 `;
 
 const Wrapper = css`
@@ -239,6 +245,9 @@ const useTextTitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   line-height: 1.3;
   margin-right: 12px;
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.5rem;
+  }
 `;
 
 const useTextSubtitle = (theme: Theme) => css`
@@ -246,6 +255,9 @@ const useTextSubtitle = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   line-height: 1.3;
   color: #b0b8c1;
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.5rem;
+  }
 `;
 
 const useSummary = (theme: Theme) => css`
@@ -253,6 +265,10 @@ const useSummary = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   line-height: 1.5;
   color: #333d4b;
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.15rem;
+  }
 `;
 
 const inquiryWrapper = css`

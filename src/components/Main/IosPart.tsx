@@ -69,6 +69,10 @@ const wrapper = (theme: Theme) => css`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  ${theme.mediaQuery.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const phoneWrapper = css`
@@ -85,11 +89,16 @@ const phoneImg = css`
   height: 100%;
 `;
 
-const appGif = css`
+const appGif = (theme: Theme) => css`
   position: relative;
 
   height: 36.25rem;
   width: 17.5rem;
+
+  ${theme.mediaQuery.tablet} {
+    height: 33rem;
+    width: 16.5rem;
+  }
 `;
 const gif = css`
   position: relative;
@@ -98,15 +107,7 @@ const gif = css`
   object-fit: cover;
 `;
 
-const text = (theme: Theme) => css`
-  font-size: 1.44rem;
-  font-weight: ${theme.fontWeight.bold};
-  line-height: 1.5;
-  color: rgb(51, 61, 75);
-  max-width: 220px;
-`;
-
-const textWrapper = css`
+const textWrapper = (theme: Theme) => css`
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -114,6 +115,27 @@ const textWrapper = css`
   width: 100%;
   max-width: 900px;
   padding-left: 1.25rem;
+
+  ${theme.mediaQuery.tablet} {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 8.13rem;
+    padding-left: 0rem;
+  }
+`;
+
+const text = (theme: Theme) => css`
+  font-size: 1.44rem;
+  font-weight: ${theme.fontWeight.bold};
+  line-height: 1.5;
+  color: rgb(51, 61, 75);
+  max-width: 220px;
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.4rem;
+    margin-bottom: 1.87rem;
+  }
 `;
 
 const summary = (theme: Theme) => css`

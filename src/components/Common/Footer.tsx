@@ -59,7 +59,7 @@ const link = css`
   }
 `;
 
-const summary = css`
+const summary = (theme: Theme) => css`
   display: flex;
   align-items: center;
   height: 6.25rem;
@@ -67,11 +67,18 @@ const summary = css`
   font-size: 0.94rem;
   line-height: 1.5;
   padding: 0 67px;
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 0.65rem;
+  }
 `;
 
 const logo = (theme: Theme) => css`
   font-size: 2.2rem;
   font-weight: ${theme.fontWeight.bold};
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.8rem;
+  }
 `;
 
 const copyright = css`

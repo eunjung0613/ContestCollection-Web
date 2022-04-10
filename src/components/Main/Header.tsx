@@ -80,6 +80,10 @@ const title = (theme: Theme) => css`
   margin-bottom: 50px;
   font-size: 2.8rem;
   font-weight: ${theme.fontWeight.bold};
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 2.25rem;
+  }
 `;
 
 const buttonWrapper = css`
