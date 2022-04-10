@@ -182,11 +182,14 @@ const phoneImg = (theme: Theme) => css`
   }
 `;
 
-const Wrapper = css`
+const Wrapper = (theme: Theme) => css`
   position: relative;
   min-height: 100vh;
   border-radius: 2rem 0px 0px 2rem;
   margin: 0 4rem 0 17rem;
+  ${theme.mediaQuery.mobile} {
+    margin: 0 0.2rem 0 10rem;
+  }
 `;
 
 const methodWrapper = css`

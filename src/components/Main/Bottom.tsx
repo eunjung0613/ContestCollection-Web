@@ -65,6 +65,12 @@ const summary = (theme: Theme) => css`
   ${theme.mediaQuery.tablet} {
     font-size: 2.5rem;
   }
+
+  ${theme.mediaQuery.mobile} {
+    display: flex;
+    flex-direction: column;
+    font-size: 2.1rem;
+  }
 `;
 
 const subSummary = (theme: Theme) => css`
@@ -74,6 +80,9 @@ const subSummary = (theme: Theme) => css`
   color: #b0b8c1;
   ${theme.mediaQuery.tablet} {
     font-size: 1.6rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.45rem;
   }
 `;
 

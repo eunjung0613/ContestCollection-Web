@@ -51,8 +51,12 @@ const wrapper = css`
   height: 45rem;
 `;
 
-const logoMotion = css`
+const logoMotion = (theme: Theme) => css`
   margin-left: 13px;
+
+  ${theme.mediaQuery.mobile} {
+    margin: 7px 0 0 0px;
+  }
 `;
 
 const lottieWrapper = css`
@@ -84,6 +88,11 @@ const title = (theme: Theme) => css`
   ${theme.mediaQuery.tablet} {
     font-size: 2.25rem;
   }
+  ${theme.mediaQuery.mobile} {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+  }
 `;
 
 const buttonWrapper = css`
@@ -113,6 +122,11 @@ const button = (theme: Theme) => css`
     background-color: #8b95a1;
     transition: all 0.5s;
   }
+
+  ${theme.mediaQuery.mobile} {
+    width: 7.5rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const addButton = (theme: Theme) => css`
@@ -136,5 +150,10 @@ const addButton = (theme: Theme) => css`
   :hover {
     background-color: #8b95a1;
     transition: all 0.5s;
+  }
+  ${theme.mediaQuery.mobile} {
+    margin: 0 0.2rem;
+    width: 7.5rem;
+    font-size: 0.9rem;
   }
 `;
