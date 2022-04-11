@@ -68,7 +68,7 @@ src
 
 해당 프로젝트는 이와 같은 인원으로 진행하였습니다.
 
-|                                         FE: [hanseulhee](https://github.com/hanseulhee)                                          |                FE: [eunjung0613](https://github.com/eunjung0613)                |                 IOS: [julia0926](https://github.com/julia0926)                  |                 BE: [julia0926](https://github.com/SonChangHa)                  |
+|                                         FE: [hanseulhee](https://github.com/hanseulhee)                                          |                FE: [eunjung0613](https://github.com/eunjung0613)                |                 IOS: [julia0926](https://github.com/julia0926)                  |                 BE: [SonChangHa](https://github.com/SonChangHa)                  |
 | :------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: | :-----------------------------------------------------------------------------: |
 | <img src="https://avatars.githubusercontent.com/u/63100352?v=4" width="70px" /> | <img src="https://avatars.githubusercontent.com/u/37800677?v=4" width="70px" /> | <img src="https://avatars.githubusercontent.com/u/37897873?v=4" width="70px" /> | <img src="https://avatars.githubusercontent.com/u/49190602?v=4" width="70px" /> |
 
