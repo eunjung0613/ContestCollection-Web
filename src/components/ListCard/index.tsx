@@ -20,7 +20,7 @@ function ListCard({ name, award, subTitle, img }: Props) {
         </div>
         <div css={bottomWrapper}>
           <div css={imgWrapper}>
-            <img src={img} alt="img" css={imgStyle} />
+            <img src={img} alt="준비중입니다." css={imgStyle} />
           </div>
           <div css={summaryWrapper}>
             <span css={Summary}>{subTitle}</span>
