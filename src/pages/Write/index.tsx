@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-
 import WriteCard from "components/WriteCard";
 
 function Write() {

@@ -2,6 +2,7 @@
 
 import { css, Theme } from "@emotion/react";
 import React, { useState } from "react";
+import theme from "styles/theme";
 
 function WriteCard() {
   const category2 = {
@@ -174,6 +175,10 @@ export default WriteCard;
 // 하기 css 차후 작성 예정
 const mainwrap = (theme: Theme) => css`
   display: flex;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
 const formwrap = (theme: Theme) => css`
@@ -182,9 +187,13 @@ const formwrap = (theme: Theme) => css`
   border-radius: 8px;
   box-shadow: 2px 3px 5px 0px gray;
   background-color: ${theme.color.white};
+  ${theme.mediaQuery.tablet} {
+    width: 80%;
+    margin: auto auto;
+  }
 `;
 
-const select = css`
+const select = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -192,9 +201,13 @@ const select = css`
   height: 1.7rem;
   margin-top: 0.8rem;
   text-align: center;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const projectName = css`
+const projectName = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -202,9 +215,13 @@ const projectName = css`
   width: 50rem;
   height: 1.7rem;
   margin-top: 0.8rem;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const year = css`
+const year = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -212,9 +229,13 @@ const year = css`
   width: 50rem;
   height: 1.7rem;
   margin-top: 0.8rem;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const textArea = css`
+const textArea = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -222,9 +243,13 @@ const textArea = css`
   width: 50rem;
   height: 5rem;
   margin-top: 0.8rem;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const github = css`
+const github = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -232,9 +257,13 @@ const github = css`
   width: 50rem;
   height: 1.8rem;
   margin-top: 0.8rem;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const youtube = css`
+const youtube = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -242,9 +271,13 @@ const youtube = css`
   width: 50rem;
   height: 1.8rem;
   margin-top: 0.8rem;
+  ${theme.mediaQuery.tablet} {
+    width: 100%;
+    margin: auto auto;
+  }
 `;
 
-const date = css`
+const date = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 3px;
@@ -252,9 +285,12 @@ const date = css`
   height: 1.8rem;
   margin-top: 0.8rem;
   margin-left: 30px;
+  ${theme.mediaQuery.tablet} {
+    width: 40%;
+  }
 `;
 
-const useSkil = css`
+const useSkil = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -263,9 +299,12 @@ const useSkil = css`
   height: 5rem;
   margin-top: 0.8rem;
   margin-left: 30px;
+  ${theme.mediaQuery.tablet} {
+    width: 90%;
+  }
 `;
 
-const summarywrap = css`
+const summarywrap = (theme: Theme) => css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
@@ -274,6 +313,9 @@ const summarywrap = css`
   height: 3rem;
   margin-top: 0.8rem;
   margin-left: 30px;
+  ${theme.mediaQuery.tablet} {
+    width: 90%;
+  }
 `;
 
 const submitbtnwrap = css`
@@ -290,6 +332,9 @@ const submitbtn = (theme: Theme) => css`
 const p = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   margin-top: 10px;
+  ${theme.mediaQuery.tablet} {
+    margin: 0.5rem;
+  }
 `;
 
 const span = (theme: Theme) => css`
