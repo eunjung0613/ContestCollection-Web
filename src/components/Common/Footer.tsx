@@ -31,15 +31,18 @@ function Footer() {
 
 export default Footer;
 
-const wrapper = css`
+const wrapper = (theme: Theme) => css`
   position: relative;
   bottom: 0;
   width: 100%;
   background-color: #191f28;
   margin-left: 13.5rem;
+  ${theme.mediaQuery.mobile} {
+    margin-left: 9.24rem;
+  }
 `;
 
-const infromWrapper = css`
+const infromWrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,6 +50,9 @@ const infromWrapper = css`
   height: 5.3rem;
   padding: 0 67px;
   background-color: black;
+  ${theme.mediaQuery.mobile} {
+    padding: 0 30px;
+  }
 `;
 
 const link = css`
@@ -59,7 +65,7 @@ const link = css`
   }
 `;
 
-const summary = css`
+const summary = (theme: Theme) => css`
   display: flex;
   align-items: center;
   height: 6.25rem;
@@ -67,11 +73,25 @@ const summary = css`
   font-size: 0.94rem;
   line-height: 1.5;
   padding: 0 67px;
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 0.65rem;
+  }
+
+  ${theme.mediaQuery.mobile} {
+    padding: 0 30px;
+  }
 `;
 
 const logo = (theme: Theme) => css`
   font-size: 2.2rem;
   font-weight: ${theme.fontWeight.bold};
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.8rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.6rem;
+  }
 `;
 
 const copyright = css`

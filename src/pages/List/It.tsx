@@ -33,10 +33,13 @@ function It() {
 
 export default It;
 
-const Wrapper = css`
+const Wrapper = (theme: Theme) => css`
   position: relative;
   min-height: 100vh;
   margin-left: 17rem;
+  ${theme.mediaQuery.mobile} {
+    margin-left: 10rem;
+  }
 `;
 
 const navWrapper = css`

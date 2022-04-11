@@ -49,13 +49,17 @@ function Explain({ smallTitle, title, summary }: Props) {
 
 export default Explain;
 
-const wrapper = css`
+const wrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   padding-left: 2.375rem;
   height: 100%;
+
+  ${theme.mediaQuery.tablet} {
+    padding-left: 0rem;
+  }
 `;
 
 const subTitle = (theme: Theme) => css`
@@ -65,12 +69,20 @@ const subTitle = (theme: Theme) => css`
   font-size: 1.13rem;
   font-weight: ${theme.fontWeight.bold};
   color: ${theme.color.darkYellow};
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 1rem;
+  }
 `;
 
 const pointTitle = (theme: Theme) => css`
   margin-bottom: 1.25rem;
   font-size: 1.7rem;
   font-weight: ${theme.fontWeight.bold};
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.23rem;
+  }
 `;
 
 const content = (theme: Theme) => css`
@@ -78,4 +90,8 @@ const content = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   color: #d2d2d3;
   letter-spacing: 0.3px;
+
+  ${theme.mediaQuery.tablet} {
+    font-size: 1.1rem;
+  }
 `;

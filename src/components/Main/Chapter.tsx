@@ -38,4 +38,8 @@ const subTitle = (theme: Theme) => css`
   font-size: 2.25rem;
   font-weight: ${theme.fontWeight.bold};
   margin-bottom: 45px;
+
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.97rem;
+  }
 `;

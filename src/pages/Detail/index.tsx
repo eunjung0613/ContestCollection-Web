@@ -94,7 +94,7 @@ const videoWrapper = css`
   aspect-ratio: 13 / 6;
 `;
 
-const summaryWrapper = css`
+const summaryWrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -103,6 +103,10 @@ const summaryWrapper = css`
 
   ::-webkit-scrollbar {
     width: 1px;
+  }
+
+  ${theme.mediaQuery.tablet} {
+    margin: 30px 0 100px 0;
   }
 `;
 
