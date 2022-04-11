@@ -22,6 +22,7 @@ function WriteCard() {
     youtubeLink: "",
     serviceLink: "",
     skills: [],
+    year: "",
   });
 
   const handleChange = (event: any) => {
@@ -56,6 +57,15 @@ function WriteCard() {
           required
           value={values.name}
           name="name"
+          onChange={handleChange}
+        ></textarea>
+        <p css={p}>경진대회 참여 해</p>
+        <textarea
+          placeholder="경진대회에 참여한 해를 기재해주세요. "
+          css={year}
+          required
+          value={values.year}
+          name="year"
           onChange={handleChange}
         ></textarea>
         <p css={p}>개발 인원</p>
@@ -185,6 +195,16 @@ const select = css`
 `;
 
 const projectName = css`
+  box-sizing: border-box;
+  border: solid 2px #afc4e7;
+  border-radius: 7px;
+  resize: none;
+  width: 50rem;
+  height: 1.7rem;
+  margin-top: 0.8rem;
+`;
+
+const year = css`
   box-sizing: border-box;
   border: solid 2px #afc4e7;
   border-radius: 7px;
