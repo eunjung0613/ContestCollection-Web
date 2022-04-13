@@ -28,13 +28,16 @@ function Signin() {
       <div css={rightWrapper}>
         <h1 css={title}>로그인</h1>
         <p css={subtitle}>S_CON에 로그인하고 더 많은 서비스를 이용하세요.</p>
-
-        <button css={button}>
-          <FcGoogle size="45" /> <span css={buttonSummary}>Google Login</span>
-        </button>
-        <button css={button}>
-          <FcUpRight size="45" /> <span css={buttonSummary}>Kakao Login</span>
-        </button>
+        <Link to="https://s-con.vercel.app/notfound">
+          <button css={button}>
+            <FcGoogle size="45" /> <span css={buttonSummary}>Google Login</span>
+          </button>
+        </Link>
+        <Link to="https://s-con.vercel.app/notfound">
+          <button css={button}>
+            <FcUpRight size="45" /> <span css={buttonSummary}>Kakao Login</span>
+          </button>
+        </Link>
       </div>
     </div>
   );
