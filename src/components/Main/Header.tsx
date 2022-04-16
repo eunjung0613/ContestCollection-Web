@@ -59,13 +59,16 @@ const logoMotion = (theme: Theme) => css`
   }
 `;
 
-const lottieWrapper = css`
+const lottieWrapper = (theme: Theme) => css`
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 100%;
+  ${theme.mediaQuery.mobile} {
+    opacity: 0;
+  }
 `;
 
 const introduceWrapper = css`

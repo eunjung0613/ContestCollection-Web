@@ -91,7 +91,7 @@ const header = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
 
   ${theme.mediaQuery.mobile} {
-    height: 8rem;
+    height: 5rem;
   }
 `;
 
@@ -121,7 +121,7 @@ const rightWrapper = (theme: Theme) => css`
   }
   ${theme.mediaQuery.mobile} {
     position: absolute;
-    margin-left: 0.5rem;
+    margin-left: 0.1rem;
   }
 `;
 
@@ -172,7 +172,7 @@ const button = (theme: Theme) => css`
   }
 
   ${theme.mediaQuery.mobile} {
-    width: 270px;
+    width: 290px;
     font-size: 1rem;
   }
 `;
