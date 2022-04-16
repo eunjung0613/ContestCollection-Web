@@ -62,7 +62,7 @@ const leftWrapper = (theme: Theme) => css`
     width: 25rem;
   }
   ${theme.mediaQuery.mobile} {
-    width: 16rem;
+    background-color: ${theme.color.white};
   }
 `;
 
@@ -73,10 +73,13 @@ const logoWrapper = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
 `;
 
-const logoImage = css`
+const logoImage = (theme: Theme) => css`
   width: 2rem;
   height: 2rem;
   margin-right: 0.7rem;
+  ${theme.mediaQuery.mobile} {
+    z-index: 10;
+  }
 `;
 
 const header = (theme: Theme) => css`
@@ -92,12 +95,15 @@ const header = (theme: Theme) => css`
   }
 `;
 
-const lottieWrapper = css`
+const lottieWrapper = (theme: Theme) => css`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  ${theme.mediaQuery.mobile} {
+    opacity: 0;
+  }
 `;
 
 const rightWrapper = (theme: Theme) => css`
@@ -114,6 +120,7 @@ const rightWrapper = (theme: Theme) => css`
     margin-left: 5rem;
   }
   ${theme.mediaQuery.mobile} {
+    position: absolute;
     margin-left: 0.5rem;
   }
 `;
@@ -165,7 +172,7 @@ const button = (theme: Theme) => css`
   }
 
   ${theme.mediaQuery.mobile} {
-    width: 190px;
+    width: 270px;
     font-size: 1rem;
   }
 `;
