@@ -59,13 +59,16 @@ const logoMotion = (theme: Theme) => css`
   }
 `;
 
-const lottieWrapper = css`
+const lottieWrapper = (theme: Theme) => css`
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   height: 100%;
+  ${theme.mediaQuery.mobile} {
+    opacity: 0;
+  }
 `;
 
 const introduceWrapper = css`
@@ -91,7 +94,7 @@ const title = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     display: flex;
     flex-direction: column;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -124,8 +127,8 @@ const button = (theme: Theme) => css`
   }
 
   ${theme.mediaQuery.mobile} {
-    width: 7.5rem;
-    font-size: 0.9rem;
+    width: 7rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -153,7 +156,7 @@ const addButton = (theme: Theme) => css`
   }
   ${theme.mediaQuery.mobile} {
     margin: 0 0.2rem;
-    width: 7.5rem;
-    font-size: 0.9rem;
+    width: 7rem;
+    font-size: 0.8rem;
   }
 `;

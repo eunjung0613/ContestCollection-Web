@@ -40,6 +40,6 @@ const subTitle = (theme: Theme) => css`
   margin-bottom: 45px;
 
   ${theme.mediaQuery.mobile} {
-    font-size: 1.97rem;
+    font-size: 1.8rem;
   }
 `;

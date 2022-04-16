@@ -165,10 +165,15 @@ function Main() {
 export default Main;
 
 const img = (theme: Theme) => css`
-  max-width: calc(50% - 30px);
+  max-width: calc(49% - 40px);
 
   ${theme.mediaQuery.tablet} {
     margin-left: 3.125rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    margin-left: 0rem;
+    margin-top: 3rem;
+    max-width: calc(100% - 40px);
   }
 `;
 
@@ -180,6 +185,11 @@ const phoneImg = (theme: Theme) => css`
     margin-left: 0rem;
     margin-right: 3.125rem;
   }
+  ${theme.mediaQuery.mobile} {
+    margin-left: 0rem;
+    margin-bottom: 3rem;
+    max-width: calc(65% - 40px);
+  }
 `;
 
 const Wrapper = (theme: Theme) => css`
@@ -188,7 +198,7 @@ const Wrapper = (theme: Theme) => css`
   border-radius: 2rem 0px 0px 2rem;
   margin: 0 4rem 0 17rem;
   ${theme.mediaQuery.mobile} {
-    margin: 0 0.2rem 0 10rem;
+    margin: 0 0.2rem 0 8rem;
   }
 `;
 
@@ -208,39 +218,59 @@ const subTitle = (theme: Theme) => css`
   font-size: 2.25rem;
   font-weight: ${theme.fontWeight.bold};
   margin-bottom: 45px;
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.87rem;
+  }
 `;
 
-const methodSummary = css`
+const methodSummary = (theme: Theme) => css`
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   margin: 220px 0;
+  ${theme.mediaQuery.mobile} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
-const methodLeft = css`
+const methodLeft = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 2.375rem;
   width: 34.75rem;
   height: 100%;
+  ${theme.mediaQuery.mobile} {
+    padding-left: 0rem;
+    width: 32rem;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const useWrapper = css`
   padding: 200px 0;
 `;
 
-const useSummaryWrapper = css`
+const useSummaryWrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   margin: 180px 0;
   padding-left: 2.375rem;
+
+  ${theme.mediaQuery.mobile} {
+    padding-left: 0rem;
+  }
 `;
 
-const useSummaryTitle = css`
+const useSummaryTitle = (theme: Theme) => css`
   display: flex;
   margin-bottom: 1.5rem;
+  ${theme.mediaQuery.mobile} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const useTextTitle = (theme: Theme) => css`
@@ -250,6 +280,9 @@ const useTextTitle = (theme: Theme) => css`
   margin-right: 12px;
   ${theme.mediaQuery.tablet} {
     font-size: 1.5rem;
+  }
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.35rem;
   }
 `;
 
@@ -261,6 +294,9 @@ const useTextSubtitle = (theme: Theme) => css`
   ${theme.mediaQuery.tablet} {
     font-size: 1.5rem;
   }
+  ${theme.mediaQuery.mobile} {
+    font-size: 1.35rem;
+  }
 `;
 
 const useSummary = (theme: Theme) => css`
@@ -271,6 +307,7 @@ const useSummary = (theme: Theme) => css`
 
   ${theme.mediaQuery.tablet} {
     font-size: 1.15rem;
+    margin-bottom: 1rem;
   }
 `;
 
@@ -283,7 +320,11 @@ const linkTo = css`
   color: blue;
 `;
 
-const endWrapper = css`
+const endWrapper  = (theme: Theme) => css`
   display: flex;
   width: 100%;
+
+  ${theme.mediaQuery.mobile} {
+    flex-direction: column;
+  }
 `;

@@ -87,6 +87,8 @@ const phoneImg = css`
   align-items: center;
   width: 100%;
   height: 100%;
+
+
 `;
 
 const appGif = (theme: Theme) => css`
@@ -99,6 +101,7 @@ const appGif = (theme: Theme) => css`
     height: 33rem;
     width: 16.5rem;
   }
+
 `;
 const gif = css`
   position: relative;
