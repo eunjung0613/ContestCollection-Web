@@ -38,7 +38,7 @@ const wrapper = (theme: Theme) => css`
   background-color: #191f28;
   margin-left: 13.5rem;
   ${theme.mediaQuery.mobile} {
-    margin-left: 9.24rem;
+    margin-left: 6.69rem;
   }
 `;
 

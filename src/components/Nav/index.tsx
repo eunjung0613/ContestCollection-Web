@@ -51,8 +51,8 @@ const section = (theme: Theme) => css`
     width: 1px;
   }
   ${theme.mediaQuery.mobile} {
-    width: 9.3rem;
-    padding: 0px 23px;
+    width: 6.7rem;
+    padding: 0px 20px;
   }
 `;
 
@@ -69,6 +69,10 @@ const header = (theme: Theme) => css`
   font-size: 1.24em;
 
   font-weight: ${theme.fontWeight.bold};
+  ${theme.mediaQuery.mobile} {
+    position: absolute;
+    font-size: 1.1em;
+  }
 `;
 
 const logoWrapper = css`
@@ -83,7 +87,7 @@ const logoImage = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     width: 1.7rem;
     height: 1.7rem;
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
   }
 `;
 
@@ -95,14 +99,22 @@ const nav = (theme: Theme) => css`
 
   font-size: 0.95rem;
   font-weight: ${theme.fontWeight.normal};
+
+  ${theme.mediaQuery.mobile} {
+    margin-top: 100px;
+    font-size: 0.75rem;
+  }
 `;
 
-const buttonWrapper = css`
+const buttonWrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   gap: 1.6rem;
+  ${theme.mediaQuery.mobile} {
+    position: relative;
+  }
 `;
 
 const title = (theme: Theme) => css`
@@ -112,4 +124,7 @@ const title = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 0.87rem;
   line-height: 1.7rem;
+  ${theme.mediaQuery.mobile} {
+    font-size: 0.7rem;
+  }
 `;

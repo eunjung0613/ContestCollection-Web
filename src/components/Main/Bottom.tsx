@@ -69,7 +69,7 @@ const summary = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     display: flex;
     flex-direction: column;
-    font-size: 2.1rem;
+    font-size: 1.98rem;
   }
 `;
 
@@ -82,7 +82,7 @@ const subSummary = (theme: Theme) => css`
     font-size: 1.6rem;
   }
   ${theme.mediaQuery.mobile} {
-    font-size: 1.45rem;
+    font-size: 1.32rem;
   }
 `;
 

@@ -91,7 +91,7 @@ const title = (theme: Theme) => css`
   ${theme.mediaQuery.mobile} {
     display: flex;
     flex-direction: column;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 `;
 
@@ -124,8 +124,8 @@ const button = (theme: Theme) => css`
   }
 
   ${theme.mediaQuery.mobile} {
-    width: 7.5rem;
-    font-size: 0.9rem;
+    width: 7rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -153,7 +153,7 @@ const addButton = (theme: Theme) => css`
   }
   ${theme.mediaQuery.mobile} {
     margin: 0 0.2rem;
-    width: 7.5rem;
-    font-size: 0.9rem;
+    width: 7rem;
+    font-size: 0.8rem;
   }
 `;
