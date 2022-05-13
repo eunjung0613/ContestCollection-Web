@@ -1,27 +1,40 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Theme } from "@emotion/react";
-import { upload } from "@testing-library/user-event/dist/upload";
-import React, { useState } from "react";
-import theme from "styles/theme";
+import axios from "axios";
+import { useState } from "react";
+import xlsxFile from "read-excel-file";
 
 function WriteCard() {
+  const [text, setText] = useState("선택된 파일이 없습니다.");
+
   const handleFile = (e: any) => {
     console.log(e.target.files[0]);
+    xlsxFile(e.target.files[0]).then((sheets: any) => {
+      console.log(sheets);
+      setText(e.target.files[0].name);
+      // axios.post("url", sheets).then(() => {
+      //   setText("선택된 파일이 없습니다");
+      // });
+    });
   };
+
   return (
     <div css={mainwrap}>
       <div css={filebox}>
-        <input className={"upload-name"} css={uploadname} />
+        <input type="text" id={"name"} css={uploadname} readOnly value={text} />
         <label className={"label"} htmlFor={"input-file"} css={label}>
-          파일 찾기
+          업로드
         </label>
         <input
+          formMethod="post"
           type={"file"}
           id={"input-file"}
           accept=".xlsx"
           style={{ display: "none" }}
-          onChange={(e) => handleFile(e)}
+          onChange={(e) => {
+            handleFile(e);
+          }}
         />
       </div>
     </div>
