@@ -27,6 +27,7 @@ function WriteCard() {
           업로드
         </label>
         <input
+          css={uploadfile}
           formMethod="post"
           type={"file"}
           id={"input-file"}
@@ -47,17 +48,22 @@ export default WriteCard;
 
 const mainwrap = (theme: Theme) => css`
   display: flex;
-  margin-top: 3rem;
+  margin: 0;
 `;
-const filebox = (theme: Theme) => css``;
+const filebox = (theme: Theme) => css`
+  display: relative;
+`;
 
 const uploadname = (theme: Theme) => css`
   display: inline-block;
   height: 40px;
   padding: 0 10px;
   vertical-align: middle;
-  border: 1px solid #dddddd;
-  color: #808080;
+  border: 1px solid ${theme.color.yellow};
+  :hover {
+    color: ${theme.color.darkYellow};
+  }
+  color: ${theme.color.lightGrey};
 `;
 
 const label = (theme: Theme) => css`
@@ -65,8 +71,10 @@ const label = (theme: Theme) => css`
   padding: 6px 25px;
   color: #fff;
   vertical-align: middle;
-  background-color: #999999;
+  background-color: ${theme.color.darkYellow};
   cursor: pointer;
   height: 40px;
   margin-left: 10px;
 `;
+
+const uploadfile = (theme: Theme) => css``;
