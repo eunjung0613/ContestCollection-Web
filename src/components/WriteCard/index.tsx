@@ -3,20 +3,28 @@
 import { css, Theme } from "@emotion/react";
 import axios from "axios";
 import { useState } from "react";
-import xlsxFile from "read-excel-file";
 
 function WriteCard() {
   const [text, setText] = useState("선택된 파일이 없습니다.");
 
   const handleFile = (e: any) => {
+    let form = new FormData();
+    form.append("file", e.target.files[0]);
     console.log(e.target.files[0]);
-    xlsxFile(e.target.files[0]).then((sheets: any) => {
-      console.log(sheets);
-      setText(e.target.files[0].name);
-      // axios.post("url", sheets).then(() => {
-      //   setText("선택된 파일이 없습니다");
-      // });
-    });
+    axios({
+      // post 전송 요청
+      responseType: "blob",
+      method: "POST",
+      url: "http://54.201.143.111:5000/upload",
+      data: form,
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
+      .then((response) => {
+        setText("전송성공");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (

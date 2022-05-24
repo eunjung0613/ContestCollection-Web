@@ -6,22 +6,23 @@ import { motion } from "framer-motion";
 import { defaultFadeInLeftVariants } from "constants/motion";
 import { Link } from "react-router-dom";
 import logo from "assets/images/logo.png";
-
+import LottieWrapper from "components/Common/LottieWrapper";
+import arrowjump from "assets/lottieJSON/arrowjump.json";
+import bubble from "assets/lottieJSON/bubble.json";
 function Write() {
   return (
     <div css={Wrapper}>
-      <div css={leftWrapper}>
-        <header css={header}>
-          <Link to="/">
-            <div css={logoWrapper}>
-              <img src={logo} alt="logo" css={logoImage} />
-              S_CON
-            </div>
-          </Link>
-        </header>
-      </div>
+      <Link to="/">
+        <div css={logoWrapper}>
+          <img src={logo} alt="logo" css={logoImage} />
+          S_CON
+        </div>
+      </Link>
 
       <div css={rightWrapper}>
+        <div css={lottiebubble}>
+          <LottieWrapper lottieData={bubble} />
+        </div>
         <motion.p
           initial="initial"
           whileInView="animate"
@@ -30,10 +31,13 @@ function Write() {
           exit="exit"
           css={duration}
         >
-          <p>당신을 위한 파일 등록</p>
+          <p>서비스 추가하기</p>
         </motion.p>
         <div css={Writecard}>
           <WriteCard />
+        </div>
+        <div css={lottiearrow}>
+          <LottieWrapper lottieData={arrowjump} />
         </div>
       </div>
     </div>
@@ -45,19 +49,6 @@ export default Write;
 const Wrapper = (theme: Theme) => css`
   display: flex;
   flex-direction: row;
-`;
-const leftWrapper = (theme: Theme) => css`
-  top: 0;
-  left: 0;
-  width: 23rem;
-  height: 100vh;
-  background-color: ${theme.color.grey};
-  ${theme.mediaQuery.tablet} {
-    width: 13.5rem;
-  }
-  ${theme.mediaQuery.mobile} {
-    background-color: ${theme.color.white};
-  }
 `;
 
 const logoImage = (theme: Theme) => css`
@@ -75,23 +66,8 @@ const logoWrapper = (theme: Theme) => css`
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  font-weight: ${theme.fontWeight.bold};
-`;
-
-const header = (theme: Theme) => css`
-  top: 0px;
-  display: flex;
-  align-items: center;
-  width: 100%;
   height: 5.7rem;
-  flex-direction: row;
-  align-items: center;
-
   font-weight: ${theme.fontWeight.bold};
-
-  ${theme.mediaQuery.mobile} {
-    height: 5.7rem;
-  }
 `;
 
 const rightWrapper = (theme: Theme) => css`
@@ -102,8 +78,7 @@ const rightWrapper = (theme: Theme) => css`
   align-items: center;
   min-height: 100vh;
   width: fit-content;
-  margin-left: 20rem;
-
+  margin-left: 25rem;
   ${theme.mediaQuery.tablet} {
     margin-left: 5rem;
   }
@@ -122,9 +97,22 @@ const Writecard = (theme: Theme) => css`
 const duration = (theme: Theme) => css`
   font-weight: ${theme.fontWeight.bold};
   font-size: 1.8rem;
-  line-height: 1.3;
   text-align: center;
+  margin-right: 25%;
   ${theme.mediaQuery.mobile} {
     font-size: 1.6rem;
   }
+`;
+
+const lottiearrow = (theme: Theme) => css`
+  width: 20%;
+  margin-left: 45%;
+  transform: scaleY(-1);
+  display: inline-block;
+`;
+
+const lottiebubble = (theme: Theme) => css`
+  width: 25%;
+  margin-right: 80%;
+  transform: rotate(30deg);
 `;
